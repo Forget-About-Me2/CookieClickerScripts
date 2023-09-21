@@ -17,7 +17,7 @@ console.log(document.querySelector("#bankGood-" + i + " > div:nth-child(1) > div
 
  */
 // Stops the machine from marching forward.
-clearInterval(StonkManager);
+clearInterval(StonkManagerUser);
 
 let reset = false; //By default, StonkManager saves data between sessions, this flag is used to reset the stored data. Set to true and reload to reset data. Don't forget to turn it back off on subsequenct loads
 const autoOpen = true; //In the current design StonkManager only works if the stock market is opened, when this flag is enabled the StonkManager will automatically open this. This is useful between ascensions
@@ -64,7 +64,7 @@ var sellMinMult = 1.3;
 
 
 // Timer for Stonks
-var StonkManager
+var StonkManagerUser
 const readyCheck = setInterval(() => {
 	print("Waiting for game to startup before being able to properly boot StonkManager ");
 	const Game = unsafeWindow.Game;
@@ -84,7 +84,7 @@ const readyCheck = setInterval(() => {
 		}
 		localStorage.setItem("StonkAvg", JSON.stringify(resourceAverage));
 		print(resourceAverage)
-		StonkManager = setInterval(function() {
+		StonkManagerUser = setInterval(function() {
 
 			Stonks();
 

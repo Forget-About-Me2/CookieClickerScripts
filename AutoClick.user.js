@@ -11,7 +11,7 @@ var intoTheAbyss = function() {
     }
 };
 
-const autoClick = setInterval(function() {
+const autoClickUser = setInterval(function() {
     const Game = unsafeWindow.Game;
     if (typeof Game !== 'undefined' && typeof Game.ready !== 'undefined' && Game.ready) {
         if (Game.hasBuff('Click frenzy') || Game.hasBuff('Cursed finger')||Game.hasBuff('Dragonflight')) intoTheAbyss();

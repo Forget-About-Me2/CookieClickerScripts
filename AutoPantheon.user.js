@@ -66,7 +66,7 @@ let M;
 
 
 
-let autoPantheon;
+let autoPantheonUser;
 const readyCheck = setInterval(() => {
     print("Waiting for game to startup before starting AutoPantheon.");
 
@@ -79,7 +79,7 @@ const readyCheck = setInterval(() => {
             godPriorityCastToIndex = true;
         }
         calculatePantheon(); // Initial calculation to set things correct on startup.
-        autoPantheon = setInterval(() => {
+        autoPantheonUser = setInterval(() => {
             calculatePantheon();
         }, 150000); //Calculate god slots every 5 minutes.
         clearInterval(readyCheck);
